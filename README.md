@@ -53,22 +53,8 @@ npm install
 ### 3. Set Up API Key
 
 - The backend uses a Fireworks AI API key.
-- By default, the key is hardcoded in [`backend/server.js`](backend/server.js) as `API_KEY`.
-- **For security, you should move the API key to a `.env` file:**
-
-Create a `.env` file in the `backend/` directory:
-
-```
-API_KEY=your_actual_api_key_here
-```
-
-Then, update [`backend/server.js`](backend/server.js) to load the key from the environment:
-
-```js
-import dotenv from "dotenv";
-dotenv.config();
-const API_KEY = process.env.API_KEY;
-```
+- By default, the key is in [`backend/server.js`](backend/server.js) as `API_KEY`.
+- As this is for testing,you can find it in the server.js but for security and future purpose.It is recommended to hardoded it in server.js as 'API_KEY' while it is being stored in .env
 
 ### 4. Start the Backend Server
 
@@ -109,9 +95,6 @@ npm start
 - **API Model:** The model used is set in [`backend/server.js`](backend/server.js) as `MODEL`. You can change this to another Fireworks model if desired.
 - **Frontend Assets:** Replace `logor.svg` with your own logo if needed.
 
-## Security Note
-
-**Do not commit your API key to version control.** Use environment variables and `.env` files for sensitive information.
 
 ## Troubleshooting
 
@@ -119,9 +102,7 @@ npm start
 - **API Errors:** Check the backend console for error messages if summarization fails.
 - **File Type Not Supported:** Only PDF, DOCX, and TXT are supported.
 
-## License
 
-This project is licensed under the ISC License.
 
 ---
 
